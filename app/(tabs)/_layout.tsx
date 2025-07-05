@@ -17,7 +17,7 @@ const _layout = () => {
       return (
         <ImageBackground
           source={images.highlight}
-          className="flex flex-row gap-1 w-full flex-1 min-w-[112px] min-h-14 mt-4 rounded-full items-center justify-center overflow-hidden"
+          className="flex flex-row gap-1 w-full flex-1 min-w-[100px] min-h-[65px] mt-4 rounded-full items-center justify-center overflow-hidden"
         >
           <Image source={icon} className="size-5" tintColor="#151312" />
           <Text className="text-secondary text-base ml-2">{title}</Text>
@@ -46,10 +46,9 @@ const _layout = () => {
           borderRadius: 50,
           marginHorizontal: 20,
           marginBottom: 36,
-          height: 50,
+          height: 52,
           position: "absolute",
           overflow: "hidden",
-          borderWidth: 1,
           borderColor: "0f0d23",
         },
       }}
