@@ -15,7 +15,7 @@ import { fetchMovies } from "../../services/api";
 import MovieCard from "../../components/MovieCard";
 import { getTrendingMovies } from "../../services/appwrite";
 import { useEffect } from "react";
-import TrendingCard from "@/components/TrendingCard";
+import TrendingCard from "../../components/TrendingCard";
 
 export default function Index() {
   const router = useRouter();
@@ -30,9 +30,6 @@ export default function Index() {
     error,
   } = useFetch(() => fetchMovies({ query: "" }));
 
-  useEffect(() => {
-    console.warn(trendingMovies);
-  }, [trendingMovies]);
   return (
     <View className="flex-1 bg-primary h-full">
       <Image source={images.bg} className="absolute z-0 w-full" />
