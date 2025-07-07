@@ -36,8 +36,8 @@ const MovieDetails = () => {
                 uri: `https://image.tmdb.org/t/p/w500${movie?.poster_path}
 `,
               }}
-              className="w-full h-[550px]"
-              resizeMode="cover"
+              className="w-full object-cover h-[550px]"
+              resizeMode="contain"
             />
             <View className="flex-col items-start justify-center mt-5 px-5">
               <Text className="text-white font-bold text-xl">
@@ -51,7 +51,7 @@ const MovieDetails = () => {
                   {movie?.runtime}m
                 </Text>
               </View>
-              <View className="mt-2 flex-row items-center bg-dark-200 px-2 py-1 rounded-md gap-x-1 ">
+              <View className="mt-2 flex-row items-center bg-dark-200  py-1 rounded-md gap-x-1 ">
                 <Image source={icons.star} className="size-5" />
                 <Text className="text-white font-bold text-sm">
                   {movie?.vote_average.toFixed(1) || 0}
@@ -86,13 +86,8 @@ const MovieDetails = () => {
         </ScrollView>
         <TouchableOpacity
           onPress={router.back}
-          className="absolute bottom-5 left-0 right-0 mx-5 bg-accent rounded-lg py-3.5 flex flex-row items-center justify-center z-50 "
+          className="absolute bottom-5 left-0 right-0 mx-5 bg-dark-200 rounded-lg py-3.5 flex flex-row items-center justify-center z-50 "
         >
-          <Image
-            source={icons.arrow}
-            className="size-5 mr-1 mt-0.5 rotate-180 "
-            tintColor="#fff"
-          />
           <Text className="text-white font-semibold text-base">GO back</Text>
         </TouchableOpacity>
       </View>

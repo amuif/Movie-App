@@ -14,7 +14,6 @@ import useFetch from "../../services/useFetch";
 import { fetchMovies } from "../../services/api";
 import MovieCard from "../../components/MovieCard";
 import { getTrendingMovies } from "../../services/appwrite";
-import { useEffect } from "react";
 import TrendingCard from "../../components/TrendingCard";
 
 export default function Index() {
@@ -31,7 +30,7 @@ export default function Index() {
   } = useFetch(() => fetchMovies({ query: "" }));
 
   return (
-    <View className="flex-1 bg-primary h-full">
+    <View className="flex-1 bg-black h-full">
       <Image source={images.bg} className="absolute z-0 w-full" />
       <ScrollView
         className="flex-1 px-5"
@@ -41,7 +40,9 @@ export default function Index() {
           paddingBottom: 10,
         }}
       >
-        <Image source={icons.logo} className="w-12 h-10  mx-auto mt-20 mb-5" />
+        <Text className="text-white text-xl uppercase font-bold pt-14">
+          Movie Center
+        </Text>
         {loading || trendingLoading ? (
           <ActivityIndicator
             size="large"

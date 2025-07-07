@@ -14,7 +14,7 @@ const SearchBar = ({ onPress, placeholder, onChangeText, value }: Props) => {
         source={icons.search}
         className="size-5 "
         resizeMode="contain"
-        tintColor="#ab8bff"
+        tintColor="#ffffff"
       />
       <TextInput
         onPress={onPress}

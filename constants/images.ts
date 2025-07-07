@@ -1,4 +1,4 @@
-import bg from "@/assets/images/bg.png";
+import bg from "../assets/images/bgdark.jpg";
 import highlight from "@/assets/images/highlight.png";
 import rankingGradient from "@/assets/images/rankingGradient.png";
 
